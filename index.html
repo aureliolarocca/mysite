@@ -14,10 +14,14 @@
     />
   </head>
   <body>
-    <!-- Il div #video-overlay e il video di introduzione sono stati RIMOSSI. -->
-    <!-- Il contenuto principale del sito ora è visibile per default. -->
+    <div id="video-container">
+      <video id="intro-video" autoplay muted>
+        <source src="By-Aurelio-La-Rocca.mp4" type="video/mp4" />
+        Il tuo browser non supporta il video.
+      </video>
+    </div>
 
-    <nav>
+    <nav class="main-content">
       <img src="DEVELOPMENTbk.svg.svg" alt="" />
       <p>Home</p>
       <p>Skills</p>
@@ -31,7 +35,7 @@
         </div>
       </div>
     </nav>
-    <main>
+    <main class="main-content">
       <header>
         <video class="background-video" autoplay loop muted playsinline>
           <!-- Sostituisci l'URL con il tuo video locale. Ho usato un placeholder pubblico per dimostrazione. -->
@@ -644,7 +648,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" class="main-content">
       <div class="container footer-content">
         <div class="footer-section footer-info">
           <div class="footer-logo"></div>

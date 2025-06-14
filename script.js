@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("intro-video");
+  const videoContainer = document.getElementById("video-container");
+  const mainContent = document.querySelectorAll("main-content");
+  document.querySelector("body").style.height = "100vh";
+  document.querySelector("body").style.overflow = "hidden";
+
+  mainContent.forEach((x) => {
+    x.style.display = "none";
+  });
+
+  // Quando il video finisce, nascondi il video e mostra il contenuto
+  video.addEventListener("ended", () => {
+    videoContainer.style.display = "none";
+    mainContent.forEach((x) => {
+      x.style.display = "flex";
+    });
+    document.querySelector("body").style.height = "auto";
+    document.querySelector("body").style.overflow = "auto";
+    document.querySelector("body").style.overflowX = "hidden";
+  });
   // --- LOGICA ESISTENTE DEGLI SLIDER ---
 
   // Riferimenti ai link delle categorie (gli <li> della tua sezione #project)
