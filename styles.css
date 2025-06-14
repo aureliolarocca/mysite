@@ -179,12 +179,14 @@ main header button:hover {
 }
 #Skills h3,
 #Service h3,
-#project h3 {
+#project h3,
+#pricing h3 {
   font-size: 4rem;
   font-weight: 500;
   text-align: center;
 }
-#Skills h4 {
+#Skills h4,
+#pricing h4 {
   font-size: 2rem;
   font-weight: 400;
   text-align: center;
@@ -490,4 +492,137 @@ main header button:hover {
 #project p:hover {
   border: 2px solid #388bfd;
   padding: 1rem;
+}
+
+#banner {
+  margin-top: 5rem;
+  width: 100%;
+  height: 40rem;
+  background-image: url(Gemini_Generated_Image_3pauoi3pauoi3pau.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 3rem;
+}
+
+#pricing {
+  margin-top: 3rem;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 0;
+}
+
+/* Titolo Sezione Pricing */
+.pricing-title {
+  font-size: 2.25rem; /* text-4xl */
+  line-height: 2.5rem;
+  font-weight: 700; /* font-bold */
+  text-align: center;
+  color: #fff;
+  margin-bottom: 3rem; /* mb-12 */
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 5rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Stili per le Card di Pricing */
+.pricing-card {
+  background-color: #161b22; /* Sfondo leggermente più chiaro per le card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem; /* p-6 */
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  border: 1px solid rgba(55, 65, 81, 0.5); /* border border-gray-700/50 */
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out; /* transition-transform duration-300 ease-in-out */
+  width: 80%;
+  height: auto;
+}
+.pricing-card:hover {
+  transform: scale(1.05); /* hover:scale-105 */
+  border: 1px solid #388bfd;
+}
+
+.card-title {
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 2.25rem;
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1rem; /* mb-4 */
+}
+.text-blue-400 {
+  color: #60a5fa;
+}
+.text-purple-400 {
+  color: #a78bfa;
+}
+.text-pink-400 {
+  color: #f472b6;
+}
+
+.card-price {
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.75rem;
+  color: #d1d5db; /* text-gray-300 */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+.card-price .amount {
+  font-size: 2.25rem; /* text-4xl */
+  line-height: 2.5rem;
+  font-weight: 800; /* font-extrabold */
+  color: #fff;
+}
+
+.card-description {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  color: #d1d5db; /* text-gray-300 */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+/* Stili per le liste di feature */
+.feature-list {
+  width: 100%;
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  margin-bottom: 2rem; /* mb-8 */
+}
+.feature-list li {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+.feature-list li svg {
+  width: 1.5rem; /* w-6 */
+  height: 1.5rem; /* h-6 */
+  color: #4ade80; /* text-green-400 */
+  margin-right: 0.5rem; /* mr-2 */
+  flex-shrink: 0; /* flex-shrink-0 */
+}
+
+/* Stile per il testo "Ideale per" */
+.ideal-for-text {
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem;
+  color: #9ca3af; /* text-gray-400 */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+.ideal-for-text .highlight {
+  font-weight: 600; /* font-semibold */
+  color: #e5e7eb; /* text-gray-200 */
 }
