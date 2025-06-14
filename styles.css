@@ -180,7 +180,8 @@ main header button:hover {
 #Skills h3,
 #Service h3,
 #project h3,
-#pricing h3 {
+#pricing h3,
+#contact h3 {
   font-size: 4rem;
   font-weight: 500;
   text-align: center;
@@ -625,4 +626,219 @@ main header button:hover {
 .ideal-for-text .highlight {
   font-weight: 600; /* font-semibold */
   color: #e5e7eb; /* text-gray-200 */
+}
+
+#contact {
+  margin-top: 3rem;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+#contact p {
+  opacity: 0.8;
+
+  text-align: center;
+  line-height: 1.8rem;
+}
+
+#contact form {
+  width: 50%;
+  height: auto;
+  background-color: #161b22; /* Sfondo leggermente più chiaro per il modulo */
+  padding: 2.5rem; /* p-10 */
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  border: 1px solid rgba(55, 65, 81, 0.5); /* border border-gray-700/50 */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 3rem;
+}
+
+#contact label {
+  display: block;
+  font-size: 1.2rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #e2e8f0; /* text-gray-200 */
+  margin-bottom: 0.5rem; /* mb-2 */
+  margin-bottom: -2rem;
+}
+
+/* Campi di input e textarea */
+#contact input,
+#contact textarea {
+  width: 80%;
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  font-size: 1rem; /* text-base */
+  line-height: 1.5rem;
+  background-color: #0d1117; /* Sfondo input più scuro */
+  border: 1px solid #4a5568; /* border-gray-600 */
+  border-radius: 0.5rem; /* rounded-lg */
+  color: #e2e8f0; /* text-gray-100 */
+  outline: none; /* Rimuove il bordo di focus predefinito */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #60a5fa; /* border-blue-400 */
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5); /* ring-4 ring-blue-500/30 */
+}
+#contact textarea {
+  min-height: 8rem; /* h-32 */
+  resize: vertical; /* Permette all'utente di ridimensionare verticalmente */
+}
+#contact button {
+  padding: 1.5rem 7rem;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 1.2rem;
+  border: none;
+  background-color: #1d4ed8;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#contact button:hover {
+  background-color: #1877f2;
+}
+/* Sezione Dettagli Contatto (opzionale) */
+.contact-details {
+  display: flex;
+  flex-direction: row;
+
+  gap: 10rem; /* gap-6 */
+  margin-top: 5rem; /* mt-12 */
+  padding: 3rem;
+  text-align: center;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.125rem; /* text-lg */
+  color: #e2e8f0;
+}
+.contact-item svg {
+  width: 3rem; /* w-8 */
+  height: 3rem; /* h-8 */
+  color: #60a5fa; /* text-blue-400 */
+
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.contact-item a {
+  color: #60a5fa; /* text-blue-400 */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.contact-item a:hover {
+  color: #3b82f6; /* hover:text-blue-500 */
+}
+
+/* Stili per il Footer */
+.footer {
+  background-color: #0d1117; /* Stesso colore del body per continuità */
+  padding: 2rem 3rem;
+  text-align: center;
+  border-top: 1px solid #2d3748; /* Bordo superiore leggero */
+  font-size: 0.875rem; /* text-sm */
+  color: #9ca3af; /* text-gray-400 */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* gap-8 */
+}
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.footer-logo {
+  color: #fff; /* text-white */
+  margin-bottom: 1rem; /* mb-4 */
+
+  width: 30rem;
+  height: 10rem;
+  background-image: url(DEVELOPMENT3.svg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .footer-logo {
+    margin-bottom: 0;
+  }
+}
+
+.footer-links-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem; /* gap-3 */
+  margin-bottom: 1rem; /* mb-4 */
+
+  text-align: center;
+}
+.footer-links-group h4 {
+  font-size: 1rem; /* text-base */
+  font-weight: 600; /* font-semibold */
+  color: #fff; /* text-white */
+  margin-bottom: 0.75rem; /* mb-3 */
+}
+.footer-links-group a {
+  color: #9ca3af; /* text-gray-400 */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.footer-links-group a:hover {
+  color: #60a5fa; /* hover:text-blue-400 */
+}
+@media (min-width: 768px) {
+  .footer-links-group {
+    margin-bottom: 0;
+  }
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 1.5rem; /* gap-6 */
+  margin-top: 1rem; /* mt-4 */
+}
+.footer-social-links a {
+  color: #9ca3af; /* text-gray-400 */
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+}
+.footer-social-links a:hover {
+  color: #fff; /* hover:text-white */
+}
+.footer-social-links svg {
+  width: 1.5rem; /* w-6 */
+  height: 1.5rem; /* h-6 */
+}
+
+.footer-tagline {
+  font-size: 0.95rem; /* text-base (un po' più grande del copyright) */
+  color: #e2e8f0; /* text-gray-200 */
+  margin-top: 4rem; /* mt-6 */
+  line-height: 1.4;
 }
