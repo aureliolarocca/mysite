@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>ALR.dev</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="DEVELOPMENT-removebg-preview.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="video-overlay">
+      <video
+        id="intro-video"
+        src="TUO_VIDEO.mp4"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+      >
+        Il tuo browser non supporta il tag video.
+      </video>
+    </div>
+    <nav>
+      <img src="DEVELOPMENTbk.svg.svg" alt="" />
+      <p>Home</p>
+      <p>Skills</p>
+      <p>Service</p>
+      <p>Projects</p>
+      <p>Pricing</p>
+      <p>Contact</p>
+      <div class="light">
+        <div class="btnLight">
+          <img id="btnImage" src="moon-icon-0.png" alt="" />
+        </div>
+      </div>
+    </nav>
+    <main>
+      <header>
+        <video class="background-video" autoplay loop muted playsinline>
+          <!-- Sostituisci l'URL con il tuo video locale. Ho usato un placeholder pubblico per dimostrazione. -->
+          <source src="Progetto senza titolo.mp4" type="video/mp4" />
+          Il tuo browser non supporta il tag video.
+        </video>
+
+        <!-- L'overlay opaco che si posiziona sopra il video -->
+        <div class="video-overlay" aria-hidden="true"></div>
+        <h1>Aurelio La Rocca</h1>
+        <h2>Developer</h2>
+        <button>Richiedi un preventivo</button>
+      </header>
+      <section id="Skills">
+        <h3>Skills</h3>
+        <h4>Siti personalizzati con</h4>
+        <div class="container-linguaggi">
+          <img src="./Img Linguaggi/Html.png" alt="" />
+          <img src="./Img Linguaggi/css3-logo-svg-vector.svg" alt="" />
+
+          <img src="./Img Linguaggi/Javascript.png" alt="" />
+          <img src="./Img Linguaggi/Wordpress_Blue_logo.png" alt="" />
+          <img src="./Img Linguaggi/react.png" alt="" />
+        </div>
+
+        <img
+          id="memoji"
+          src="cartoon_character_converted-removebg-preview.png"
+          alt=""
+        />
+        <button>Scopri di piu'</button>
+      </section>
+      <section id="Service">
+        <h3>Service</h3>
+        <div class="container-cards">
+          <div class="service-card">
+            <h4>Web Development</h4>
+            <p>
+              Creo esperienze digitali moderne e su misura. Sviluppo siti web
+              responsive e interattivi, trasformando le tue idee in codice
+              pulito e funzionale.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h4>Design</h4>
+            <p>
+              Creo loghi unici, interfacce eleganti e animazioni dinamiche. Il
+              mio obiettivo? Un design che non sia solo bello da vedere, ma che
+              parli davvero al tuo pubblico.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h4>Social Media Content</h4>
+            <p>
+              Immagini, parole e stile: creo contenuti su misura per i tuoi
+              social, pensati per farsi notare, emozionare e far parlare del tuo
+              brand.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="project">
+        <h3>Projects</h3>
+        <ul>
+          <li id="web-projects-link">Siti Web</li>
+          <li id="games-projects-link">Giochi</li>
+          <li id="other-projects-link">Altro</li>
+        </ul>
+        <div id="web-slider-wrapper" class="slider-wrapper">
+          <div class="slider">
+            <!-- Immagini per "Siti Web" -->
+            <img
+              src="https://placehold.co/800x500/A7F3D0/10B981?text=Sito+Web+1"
+              alt="Sito Web 1"
+              class="rounded-xl"
+            />
+            <img
+              src="https://placehold.co/800x500/A8D8EA/3B82F6?text=Sito+Web+2"
+              alt="Sito Web 2"
+              class="rounded-xl"
+            />
+            <img
+              src="https://placehold.co/800x500/D1F0C4/22C55E?text=Sito+Web+3"
+              alt="Sito Web 3"
+              class="rounded-xl"
+            />
+          </div>
+          <button class="nav-button prev-button" aria-label="Slide precedente">
+            ❮
+          </button>
+          <button class="nav-button next-button" aria-label="Slide successiva">
+            ❯
+          </button>
+          <div class="dots-container"></div>
+        </div>
+
+        <div id="games-slider-wrapper" class="slider-wrapper">
+          <div class="slider">
+            <!-- Immagini per "Giochi" -->
+            <img
+              src="https://placehold.co/800x500/FFD8B2/F97316?text=Gioco+1"
+              alt="Gioco 1"
+              class="rounded-xl"
+            />
+            <img
+              src="https://placehold.co/800x500/FECACA/EF4444?text=Gioco+2"
+              alt="Gioco 2"
+              class="rounded-xl"
+            />
+            <img
+              src="https://placehold.co/800x500/D1F0C4/22C55E?text=Gioco+3"
+              alt="Gioco 3"
+              class="rounded-xl"
+            />
+          </div>
+          <button class="nav-button prev-button" aria-label="Slide precedente">
+            ❮
+          </button>
+          <button class="nav-button next-button" aria-label="Slide successiva">
+            ❯
+          </button>
+          <div class="dots-container"></div>
+        </div>
+
+        <div id="other-slider-wrapper" class="slider-wrapper">
+          <div class="slider">
+            <!-- Immagini per "Altro" -->
+            <img
+              src="https://placehold.co/800x500/E0BBE4/9B59B6?text=Altro+1"
+              alt="Altro 1"
+              class="rounded-xl"
+            />
+            <img
+              src="https://placehold.co/800x500/957DAD/6C5B7B?text=Altro+2"
+              alt="Altro 2"
+              class="rounded-xl"
+            />
+          </div>
+          <button class="nav-button prev-button" aria-label="Slide precedente">
+            ❮
+          </button>
+          <button class="nav-button next-button" aria-label="Slide successiva">
+            ❯
+          </button>
+          <div class="dots-container"></div>
+        </div>
+        <p>Scopri tutti i miei progetti</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

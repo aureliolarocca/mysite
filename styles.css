@@ -1,0 +1,493 @@
+body {
+  width: 100vw;
+  height: auto;
+  background-color: #0d1117;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  color: white;
+  transition: 1s;
+}
+
+nav {
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  width: 90%;
+  height: 8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem auto 0 auto;
+}
+.light {
+  width: 4rem;
+  border: 1px solid white;
+  height: 2rem;
+  border-radius: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0.1rem;
+  cursor: pointer;
+}
+.btnLight {
+  position: absolute;
+  width: 2.2rem;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 2rem;
+
+  box-shadow: inset 1px 1px 5px 1px grey;
+  border: none;
+
+  transition: right 1s;
+}
+
+#btnImage {
+  width: 70%;
+  transition: 10s;
+}
+nav img {
+  width: 9rem;
+}
+
+nav p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+main {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Stili per l'header, ora con video di sfondo */
+header {
+  position: relative; /* Necessario per posizionare il video e l'overlay */
+  width: 100%; /* Assicura che l'header occupi la larghezza completa del suo genitore */
+  height: 40rem; /* Altezza del tuo header */
+  display: flex; /* Attiva il flexbox per allineare h1, h2, button */
+  flex-direction: column; /* Impila gli elementi verticalmente */
+  justify-content: center; /* Centra verticalmente il contenuto */
+  align-items: center; /* Centra orizzontalmente il contenuto */
+  margin: 0 auto; /* Centra l'header all'interno di main */
+  /* background-image: url(Progetto\ senza\ titolo.mp4); */ /* Rimosso questo, useremo il tag <video> */
+  overflow: hidden; /* Nasconde le parti del video che escono dal contenitore */
+
+  border-radius: 1rem; /* Aggiunto bordi arrotondati per estetica */
+}
+
+/* Stili per il video di sfondo */
+.background-video {
+  position: absolute; /* Posiziona il video relativamente all'header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assicura che il video copra l'intero contenitore */
+  z-index: 0; /* Mette il video dietro gli altri contenuti */
+}
+
+/* Stili per l'overlay opaco */
+.video-overlay {
+  position: absolute; /* Posiziona l'overlay relativamente all'header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Overlay nero con 60% di opacità */
+  z-index: 1; /* Mette l'overlay sopra il video ma sotto il testo */
+  pointer-events: none; /* Permette interazioni con gli elementi sottostanti */
+}
+
+/* Stili per H1 */
+h1 {
+  position: relative; /* Necessario per posizionare sopra l'overlay */
+  z-index: 2; /* Porta H1 sopra l'overlay */
+  color: white; /* Assicura che il colore sia bianco */
+  font-size: 7rem;
+  font-weight: 400;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); /* Ombra più pronunciata per leggibilità */
+  line-height: 1.1; /* Leggermente aumentato per evitare compressione */
+  margin-bottom: 0.5rem; /* Aggiunto un piccolo margine inferiore per separare da H2 */
+}
+
+/* Stili per H2 */
+h2 {
+  position: relative; /* Necessario per posizionare sopra l'overlay */
+  z-index: 2; /* Porta H2 sopra l'overlay */
+  color: white; /* Assicura che il colore sia bianco */
+  margin-top: 0; /* Rimosso il margine negativo, ora H1 gestisce lo spazio */
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Ombra più pronunciata */
+  line-height: 1.2; /* Aumentato per migliore leggibilità */
+}
+
+/* Stili per il bottone */
+main header button,
+#Skills button {
+  position: relative; /* Necessario per posizionare sopra l'overlay */
+  z-index: 2; /* Porta il bottone sopra l'overlay */
+  width: 17rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(230, 230, 230);
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #1877f2;
+  border: none;
+  margin-top: 3rem; /* Margine superiore dal testo */
+  transition: 0.3s ease-in-out; /* Transizione più fluida */
+  /* Ho rimosso margin-left: 20rem; in quanto 'align-items: center' in header lo centra */
+}
+main header button:hover {
+  cursor: pointer;
+  width: 18rem;
+  background-color: white;
+  color: #58a6ff;
+  font-weight: 700;
+  transform: scale(1.05); /* Piccolo ingrandimento al hover */
+}
+#Skills {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 5rem;
+}
+#Skills h3,
+#Service h3,
+#project h3 {
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+}
+#Skills h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+}
+#Skills button:hover {
+  cursor: pointer;
+  width: 18rem;
+  color: white;
+
+  font-weight: 700;
+  transform: scale(1.05); /* Piccolo ingrandimento al hover */
+}
+
+.container-linguaggi {
+  width: 80%;
+  height: 10rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 3rem;
+}
+.container-linguaggi img {
+  width: 5rem;
+  opacity: 0;
+  animation: cascata 1s forwards;
+  position: relative;
+  bottom: 8rem;
+  transition: width 1s;
+}
+.container-linguaggi img:nth-of-type(1) {
+  animation-delay: 1s;
+}
+.container-linguaggi img:nth-of-type(2) {
+  animation-delay: 2s;
+}
+.container-linguaggi img:nth-of-type(3) {
+  animation-delay: 3s;
+}
+.container-linguaggi img:nth-of-type(4) {
+  animation-delay: 4s;
+  width: 4rem;
+}
+.container-linguaggi img:nth-of-type(5) {
+  animation-delay: 5s;
+  width: 4rem;
+}
+.container-linguaggi img:nth-of-type(1):hover,
+.container-linguaggi img:nth-of-type(2):hover {
+  width: 8rem;
+}
+.container-linguaggi img:nth-of-type(3):hover,
+.container-linguaggi img:nth-of-type(4):hover,
+.container-linguaggi img:nth-of-type(5):hover {
+  width: 7rem;
+}
+#memoji {
+  width: 17rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+#Skills button {
+  margin: 0 auto;
+  position: inherit;
+  margin-bottom: 2rem;
+}
+@keyframes cascata {
+  0% {
+    opacity: 0;
+    bottom: 8rem;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+#Service {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-cards {
+  margin-top: 5rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: row;
+}
+.service-card {
+  background-color: #161b22;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 30rem;
+  height: 20rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  border: 1px solid #21262d;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(56, 139, 253, 0.3);
+  border-color: #388bfd;
+}
+
+.service-card h4 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: white !important;
+}
+
+.service-card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: white !important;
+  text-align: center;
+}
+
+#project ul li:hover {
+  transform: translateY(-0.9rem);
+  box-shadow: 0 0 20px rgba(56, 139, 253, 0.3);
+  border-color: #388bfd;
+}
+#project {
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#project ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+  padding: 2rem;
+
+  list-style-type: none;
+}
+#project ul li {
+  background-color: #161b22;
+  padding: 2rem 5rem;
+  border: 1px solid #ccc;
+  border-radius: 1.3rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #555;
+  transition: all 0.2s ease;
+  user-select: none;
+  color: white;
+}
+/**/
+.slider-wrapper {
+  position: relative;
+  width: 70%; /* Larghezza fluida per reattività */
+  height: 40rem;
+
+  overflow: hidden; /* Nasconde le parti delle immagini fuori dal contenitore */
+  border-radius: 12px; /* Angoli arrotondati */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Ombra più pronunciata */
+  background-color: #ffffff; /* Sfondo bianco per il contenitore */
+  margin-top: 3rem; /* Spazio tra la lista e lo slider */
+  display: none; /* Nasconde tutti gli slider per default */
+  animation: fadeIn 0.5s ease-out; /* Animazione di fade-in quando appare */
+
+  border: 1px solid #388bfd;
+}
+
+.slider-wrapper.active {
+  display: block; /* Mostra lo slider attivo */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contenitore interno delle immagini, usa flexbox per le slide */
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out; /* Animazione fluida per lo scorrimento */
+}
+
+/* Stile per ogni singola immagine nello slider */
+.slider img {
+  width: 100%; /* Ogni immagine occupa il 100% della larghezza del contenitore */
+  height: auto; /* Altezza automatica per mantenere le proporzioni */
+  flex-shrink: 0; /* Impedisce alle immagini di rimpicciolirsi */
+  display: block; /* Rimuove lo spazio extra sotto le immagini */
+  border-radius: 12px; /* Angoli arrotondati anche per le immagini */
+}
+
+/* Stili di base per i pulsanti di navigazione */
+.nav-button {
+  position: absolute;
+  top: 50%; /* Centrato verticalmente */
+  transform: translateY(
+    -50%
+  ); /* Ajusta il posizionamento per una perfetta centratura */
+  background-color: rgba(0, 0, 0, 0.6); /* Sfondo semitrasparente */
+  color: white; /* Colore del testo bianco */
+  border: none; /* Nessun bordo */
+  padding: 0.1rem 0.8rem; /* Spaziatura interna */
+  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+  font-size: 2rem; /* Dimensione del font aumentata */
+  border-radius: 50%; /* Pulsanti circolari */
+  z-index: 10; /* Assicura che i pulsanti siano sopra le immagini */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transizione per hover */
+  opacity: 0.5; /* Lieve trasparenza */
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Sfondo più scuro all'hover */
+  transform: translateY(-50%) scale(1.05); /* Lieve ingrandimento all'hover */
+  opacity: 1; /* Opacità completa all'hover */
+}
+
+.nav-button:active {
+  transform: translateY(-50%) scale(0.95); /* Effetto di click */
+}
+
+/* Posizionamento specifico per i pulsanti Precedente e Successivo */
+.prev-button {
+  left: 15px; /* Margine sinistro */
+}
+
+.next-button {
+  right: 15px; /* Margine destro */
+}
+
+/* Contenitore per i puntini di navigazione */
+.dots-container {
+  position: absolute;
+  bottom: 15px; /* Posizionato in basso */
+  left: 50%; /* Centrato orizzontalmente */
+  transform: translateX(
+    -50%
+  ); /* Ajusta il posizionamento per una perfetta centratura */
+  display: flex; /* Usa flexbox per allineare i puntini */
+  gap: 10px; /* Spazio tra i puntini */
+  z-index: 10; /* Assicura che i puntini siano sopra le immagini */
+}
+
+/* Stile per ogni singolo puntino */
+.dot {
+  width: 0.5rem; /* Larghezza del puntino */
+  height: 0.5rem; /* Altezza del puntino */
+  background-color: rgba(255, 255, 255, 0.6); /* Colore semitrasparente */
+  border-radius: 50%; /* Puntini circolari */
+  cursor: pointer; /* Indica che è cliccabile */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transizione per hover e attivo */
+  border: 2px solid rgba(0, 0, 0, 0.2); /* Bordo leggero */
+}
+
+/* Stile per il puntino attivo (slide corrente) */
+.dot.active {
+  background-color: #ffffff; /* Colore pieno per il puntino attivo */
+  border-color: #388bfd; /* Bordo colorato (preso dal tuo #388bfd) */
+  transform: scale(1.2); /* Lieve ingrandimento per il puntino attivo */
+}
+
+.dot:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.8); /* Lieve scurimento all'hover */
+  transform: scale(1.1);
+}
+
+#project p {
+  margin-top: 8rem;
+  font-size: 1.5rem;
+  border-top: 1px solid #388bfd;
+  border-bottom: 1px solid #388bfd;
+  transition: padding 0.4s ease;
+  cursor: pointer;
+}
+#project p:hover {
+  border: 2px solid #388bfd;
+  padding: 1rem;
+}
