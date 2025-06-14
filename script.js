@@ -19,6 +19,30 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("body").style.overflow = "auto";
     document.querySelector("body").style.overflowX = "hidden";
   });
+
+  const btnLight = document.querySelector("btnLight");
+const imgBtnLight = document.querySelector("btnImage");
+const light = document.querySelector("light");
+  light.addEventListener("click",()=>{ const allH3 = document.querySelectorAll("h3");
+                                      const allP = document.querySelecotrAll("p");
+                                      if(imgBtnlight.src.includes("moon-icon-0.png)){
+document.querySelector("body").style.backgroundColor = "white";
+                                                                  allH3.forEach((x)=>{
+                                                                    x.style.color = "black";
+                                                                  })
+                                                                  allP.forEach((x)=>{x.style.color="black";});
+                                                                  };
+
+
+
+}
+)
+;
+
+
+
+
+
   // --- LOGICA ESISTENTE DEGLI SLIDER ---
 
   // Riferimenti ai link delle categorie (gli <li> della tua sezione #project)
