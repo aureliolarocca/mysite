@@ -1,25 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const video = document.getElementById("intro-video");
-  const videoContainer = document.getElementById("video-container");
-  const mainContent = document.querySelectorAll("main-content");
-  document.querySelector("body").style.height = "100vh";
-  document.querySelector("body").style.overflow = "hidden";
+  //Riferimento bottone luci
+  const light = document.querySelector(".light");
 
-  mainContent.forEach((x) => {
-    x.style.display = "none";
-  });
+  light.addEventListener("click", () => {
+    const btnLight = document.querySelector(".btnLight");
+    const imgLight = document.getElementById("btnImage");
+    const allTextChanger = document.querySelectorAll(".changer");
 
-  // Quando il video finisce, nascondi il video e mostra il contenuto
-  video.addEventListener("ended", () => {
-    videoContainer.style.display = "none";
-    mainContent.forEach((x) => {
-      x.style.display = "flex";
-    });
-    document.querySelector("body").style.height = "auto";
-    document.querySelector("body").style.overflow = "auto";
-    document.querySelector("body").style.overflowX = "hidden";
+    if (imgLight.src.includes("moon-icon-0.png")) {
+      document.querySelector("body").style.backgroundColor = "white";
+      allTextChanger.forEach((x) => {
+        x.style.color = "black";
+      });
+      light.style.border = "1px solid rgba(0,0,0,0.2)";
+      light.style.backgroundColor = "rgba(0,0,0,0.1)";
+      light.style.boxShadow = " 1px 1px 5px 1px rgba(0, 0, 0, 0.7)";
+      btnLight.style.right = "0";
+      imgLight.src =
+        "pngtree-simple-sunshine-clipart-image-png-image_6527088.png";
+    } else {
+      document.querySelector("body").style.backgroundColor = "#0d1117";
+      allTextChanger.forEach((x) => {
+        x.style.color = "white";
+      });
+      light.style.border = "1px solid rgb(255,255,255)";
+      light.style.backgroundColor = "none";
+      light.style.boxShadow = " none";
+      btnLight.style.right = "2rem";
+      imgLight.src = "moon-icon-0.png";
+    }
   });
-  // --- LOGICA ESISTENTE DEGLI SLIDER ---
 
   // Riferimenti ai link delle categorie (gli <li> della tua sezione #project)
   const webProjectsLink = document.getElementById("web-projects-link");
