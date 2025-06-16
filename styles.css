@@ -1,11 +1,16 @@
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  outline: 1px solid red;
+}
+
 body {
   width: 100vw;
   height: auto;
   background-color: #0d1117;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
+
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   color: white;
